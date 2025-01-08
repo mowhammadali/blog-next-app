@@ -5,7 +5,8 @@ export default {
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/ui/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/app/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
         screens: {
@@ -21,6 +22,12 @@ export default {
     },
     plugins: [require("daisyui")],
     daisyui: {
-        themes: ["light", "dark", "aqua"],
+        themes: ["light", "dark", "aqua" , "night" , "cupcake" , "emerald"],
+        base: true,
+        styled: true,
+        utils: true, 
+        prefix: "", 
+        logs: true, 
+        themeRoot: ":root",
     },
 } satisfies Config;
