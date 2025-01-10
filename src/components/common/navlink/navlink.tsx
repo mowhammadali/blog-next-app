@@ -12,7 +12,7 @@ export default function NavLink({ path , children , ...rest }: PropsType) {
     const pathname = usePathname();
     
 
-    return <Link href={path} className={pathname === path ? 'text-base-content' : 'text-base-300'} {...rest}>
+    return <Link href={path} className={`${pathname === path ? 'text-secondary' : 'text-base-content'} select-none`} {...rest}>
         {children}
     </Link>
 }

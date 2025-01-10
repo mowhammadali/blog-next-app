@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import vazirFont from "@/constants/localfont";
 import Header from "@/components/common/header/header";
+import Providers from "@/store/providers";
+import vazirFont from "@/constants/localfont";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,11 +15,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html data-theme="emerald" lang="fa" dir="rtl">
-            <body className={`${vazirFont.variable} font-sans`}>
-                <Header />
-                {children}
-            </body>
+        <html lang="fa" dir="rtl" data-theme="emerald">
+            <Providers>
+                <body className={`${vazirFont.variable} font-sans`}>
+                    <Header />
+                    {children}
+                </body>
+            </Providers>
         </html>
     );
 }
